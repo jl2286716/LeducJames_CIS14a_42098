@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+     <meta charset="utf-8">
+     <title></title>
+     <meta name="generator" content="CSE HTML Validator (http://www.htmlvalidator.com/)">
+ </head>
+
+ <body>
+     <script>
+     	//Declare Variables
+     	var hrsWrkd=30;	//Hours worked in hrs
+     	var payRate=10;	//Pay rate in $'s/hr
+     	var overtime=40;//Hour at which double time occurs
+     	var payChk;		//Paycheck in $'s
+     	
+     	//Calculate the Paycheck and determine overtime due
+     	switch(hrsWrkd<overtime){
+     		case true:{
+     			payChk=hrsWrkd*payRate;
+     			break;
+     		}
+     		default:{
+     			payChk=overtime*payRate+2*payRate*(hrsWrkd-overtime);
+     		}
+     	};
+     	//Output the inputs and the calculation
+     	var str="<h1>Hours worked = " + hrsWrkd + "</h1>";
+     	str += "<h1>Pay Rate = $" + payRate + " $'s/hr</h1>";
+     	str += "<h1>Overtime starts at " + overtime + " hrs</h1>";
+      	str += "<h1>Pay Check = $" + payChk + "</h1>";
+      	document.write(str);
+     </script>
+
+ </body>
+</html>
