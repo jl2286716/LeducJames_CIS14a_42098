@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+     <meta charset="utf-8">
+     <title></title>
+     <meta name="generator" content="CSE HTML Validator (http://www.htmlvalidator.com/)">
+ </head>
+
+ <body>
+     <script>
+     	//Declare Variables
+     	var tstScr = prompt("What was your test score?");	//Test Score
+     	var grade;			//Grade dependant on Score
+     	
+     	//Calculate the Grade
+     	grade=	(tstScr>=90)?"A":
+     			(tstScr>=80)?"B":
+       			(tstScr>=70)?"C":
+       			(tstScr>=60)?"D":"F";
+
+     	//Output the inputs and the calculation
+     	var str="<h1>Test Score = " + tstScr + "</h1>";
+      	str += "<h1>Grade = " + grade + "</h1>";
+      	document.write(str);
+     </script>
+
+ </body>
+</html>
